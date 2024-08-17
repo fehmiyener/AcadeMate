@@ -1,5 +1,5 @@
-import myCoursesService from "../services/myCoursesService.js";
-import userService from "../services/userService.js"; // Ensure this import is correct
+import myCoursesService from "../services/myCoursesService";
+import userService from "../services/userService"; // Ensure this import is correct
 
 let getUserCourses = async (req, res) => {
     try {

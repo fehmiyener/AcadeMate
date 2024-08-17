@@ -1,5 +1,5 @@
-import myCoursesService from "../services/myCoursesService.js";
-import userService from "../services/userService.js";
+import myCoursesService from "../services/myCoursesService";
+import userService from "../services/userService";
 import bcrypt from 'bcrypt';
 
 let getPageProfile = async (req, res) => {

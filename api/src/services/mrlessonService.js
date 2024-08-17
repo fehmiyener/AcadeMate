@@ -1,4 +1,4 @@
-import DBConnection from "../configs/DBConnection.js";
+import DBConnection from "../configs/DBConnection";
 
 let createNewLesson = (data, user_id) => {
     return new Promise((resolve, reject) => {

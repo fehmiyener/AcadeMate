@@ -1,4 +1,4 @@
-import DBConnection from "../configs/DBConnection.js";
+import DBConnection from "../configs/DBConnection";
 import bcrypt from "bcryptjs";
 
 let createNewUser = (data) => {

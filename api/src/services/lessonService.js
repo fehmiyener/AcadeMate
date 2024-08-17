@@ -1,8 +1,8 @@
-import DBConnection from "../configs/DBConnection.js";
+import DBConnection from "../configs/DBConnection";
 
-export const createNewLesson = (data, user_id) => {
+let createNewLesson = (data, user_id) => {
     return new Promise((resolve, reject) => {
-        const lessonItem = {
+        let lessonItem = {
             user_id: user_id,
             iname: data.instructorName,
             isurname: data.instructorSurname,
@@ -28,7 +28,9 @@ export const createNewLesson = (data, user_id) => {
     });
 };
 
-export const getAllLessons = () => {
+
+
+let getAllLessons = () => {
     return new Promise((resolve, reject) => {
         DBConnection.query(
             'SELECT * FROM softwarelessons',
@@ -40,4 +42,18 @@ export const getAllLessons = () => {
             }
         );
     });
+};
+
+
+
+
+//
+
+
+module.exports = {
+    createNewLesson: createNewLesson,
+    getAllLessons: getAllLessons,
+   
+    //
+    
 };

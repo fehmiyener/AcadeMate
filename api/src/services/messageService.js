@@ -1,4 +1,4 @@
-import DBConnection from "../configs/DBConnection.js";
+import DBConnection from "../configs/DBConnection";
 
 const addMessage = async (messageData) => {
     return new Promise((resolve, reject) => {

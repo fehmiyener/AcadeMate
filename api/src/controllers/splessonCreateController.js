@@ -1,5 +1,5 @@
 
-import splessonService from "./../services/splessonService.js";
+import splessonService from "./../services/splessonService";
 
 let getCreateLessonPage = (req, res) => {
     return res.render("splessons.ejs");

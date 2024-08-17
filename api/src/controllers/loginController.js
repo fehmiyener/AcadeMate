@@ -1,5 +1,5 @@
 import { validationResult } from "express-validator";
-import loginService from "../services/loginService.js";
+import loginService from "../services/loginService";
 
 let getPageLogin = (req, res) => {
     return res.render("login.ejs", {

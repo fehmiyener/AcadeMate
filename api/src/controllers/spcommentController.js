@@ -1,4 +1,4 @@
-const spcommentService = require("../services/spcommentService.js");
+const spcommentService = require("../services/spcommentService");
 
 const addComment = async (req, res) => {
     let commentData = {

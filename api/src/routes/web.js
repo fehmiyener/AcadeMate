@@ -1,38 +1,38 @@
 import express from "express";
 //import mainPageController from "../controllers/mainPageController";
-import homePageController from "../controllers/homePageController.js";
-import softwareController from "../controllers/softwareController.js";
-import lessonCreateController from "../controllers/lessonCreateController.js";
-import musicController from "../controllers/musicController.js";
-import sportController from "../controllers/sportController.js"
-import marketingController from "../controllers/marketingController.js";
-import profileController from "../controllers/profileController.js"
-import registerController from "../controllers/registerController.js";
-import loginController from "../controllers/loginController.js";
-import auth from "../validation/authValidation.js";
+import homePageController from "../controllers/homePageController";
+import softwareController from "../controllers/softwareController";
+import lessonCreateController from "../controllers/lessonCreateController";
+import musicController from "../controllers/musicController";
+import sportController from "../controllers/sportController"
+import marketingController from "../controllers/marketingController";
+import profileController from "../controllers/profileController"
+import registerController from "../controllers/registerController";
+import loginController from "../controllers/loginController";
+import auth from "../validation/authValidation";
 import passport from "passport";
-import initPassportLocal from "../controllers/passportLocalController.js";
-import lessonService from "../services/lessonService.js";
-import commentController from "../controllers/commentController.js";
-import messageController from "../controllers/messageController.js";
+import initPassportLocal from "../controllers/passportLocalController";
+import lessonService from "../services/lessonService";
+import commentController from "../controllers/commentController";
+import messageController from "../controllers/messageController";
 //
-import myCoursesController from "../controllers/myCoursesController.js";
-import myCoursesService from "../services/myCoursesService.js"; 
+import myCoursesController from "../controllers/myCoursesController";
+import myCoursesService from "../services/myCoursesService"; 
 //sport lesson
-import splessonService from "../services/splessonService.js";
-import splessonCreateController from "../controllers/splessonCreateController.js";
+import splessonService from "../services/splessonService";
+import splessonCreateController from "../controllers/splessonCreateController";
 //marketing lesson
-import mrlessonService from "../services/mrlessonService.js";
-import mrlessonCreateController from "../controllers/mrlessonCreateController.js";
+import mrlessonService from "../services/mrlessonService";
+import mrlessonCreateController from "../controllers/mrlessonCreateController";
 //music lesson
-import mslessonService from "../services/mslessonService.js";
-import mslessonCreateController from "../controllers/mslessonCreateController.js";
+import mslessonService from "../services/mslessonService";
+import mslessonCreateController from "../controllers/mslessonCreateController";
 //sport comment
-import spcommentController from "../controllers/spcommentController.js";
+import spcommentController from "../controllers/spcommentController";
 //marketing comment
-import mrcommentController from "../controllers/mrcommentController.js";
+import mrcommentController from "../controllers/mrcommentController";
 //music
-import mscommentController from "../controllers/mscommentController.js";
+import mscommentController from "../controllers/mscommentController";
 // Init all passport
 initPassportLocal();
 
@@ -75,7 +75,7 @@ router.get("/splessons", async (req, res) => {
 router.post("/splessons", loginController.checkLoggedIn ,splessonCreateController.createNewLesson);
 
 //marketing
-router.get("/mrlessons.ejs", async (req, res) => {
+router.get("/mrlessons", async (req, res) => {
     try {
         const lessons = await mrlessonService.getAllLessons();
         res.render("mrlessons.ejs", { lessons: lessons });

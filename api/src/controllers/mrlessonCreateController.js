@@ -1,5 +1,5 @@
 
-import mrlessonService from "./../services/mrlessonService.js";
+import mrlessonService from "./../services/mrlessonService";
 
 let getCreateLessonPage = (req, res) => {
     return res.render("mrlessons.ejs");

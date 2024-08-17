@@ -1,4 +1,4 @@
-import registerService from "./../services/registerService.js";
+import registerService from "./../services/registerService";
 import { validationResult } from "express-validator";
 
 let getPageRegister = (req, res) => {

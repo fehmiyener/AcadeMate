@@ -1,4 +1,4 @@
-const messageService = require("../services/messageService.js");
+const messageService = require("../services/messageService");
 
 const addMessage = async (req, res) => {
     let messageData = {

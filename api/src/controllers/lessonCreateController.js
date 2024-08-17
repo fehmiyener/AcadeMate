@@ -1,5 +1,5 @@
 
-import lessonService from "./../services/lessonService.js";
+import lessonService from "./../services/lessonService";
 
 let getCreateLessonPage = (req, res) => {
     return res.render("lessons.ejs");

@@ -1,7 +1,7 @@
+require('dotenv').config();
 import mysql from "mysql2";
 
-// Database connection configuration
-const connection = mysql.createConnection({
+let connection = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
@@ -13,4 +13,4 @@ connection.connect(function(err) {
     console.log("Database connected!");
 });
 
-export default connection;
+module.exports = connection;

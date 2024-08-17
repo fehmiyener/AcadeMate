@@ -1,4 +1,4 @@
-const mrcommentService = require("../services/mrcommentService.js");
+const mrcommentService = require("../services/mrcommentService");
 
 const addComment = async (req, res) => {
     let commentData = {

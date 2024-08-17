@@ -1,7 +1,7 @@
 require('dotenv').config();
 import express from "express";
-import configViewEngine from "./configs/viewEngine.js";
-import initWebRoutes from "./routes/web.js";
+import configViewEngine from "./configs/viewEngine";
+import initWebRoutes from "./routes/web";
 import bodyParser from "body-parser";
 import cookieParser from 'cookie-parser';
 import session from "express-session";
