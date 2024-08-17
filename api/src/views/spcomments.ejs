@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Comments</title>
+    <link rel="stylesheet" href="/css/stylecm.css">
+</head>
+<body>
+    <header>
+        <a href="/"><img class="logo"  src="/resimler/logo3.png" alt=""></a> 
+     
+     
+         <div class="menu-bar">
+             
+         <ul>
+             <li class="active"><a href="/"><i class="fa fa-home"></i>Home</a></li>
+             
+             <li><a href="#"><i class="fa fa-clone"></i>Courses</a>
+                 <div class="sub-menu-1">
+                     <ul> 
+                       
+                       
+                       <li class="hover-me"><a href="#">By Category</a><i class="fa fa-angle-right"></i>
+                 <div class="sub-menu-2">
+                         <ul> 
+                           <li><a href="/software">Software</a></li>
+                           <li><a href="/sport">Sport</a></li>
+                           <li><a href="/marketing">Marketing</a></li>
+                           <li><a href="/music">Music</a></li>
+                         </ul>
+                 </div>
+             </li>
+                       
+                     </ul>
+                 </div>
+             </li>
+     
+             
+             
+             <li><a href="#"><i class="fa fa-user"></i>My Profile</a>
+                 <div class="sub-menu-1">
+                     <div>
+                         <ul> 
+                             <li><a href="/profile">Personal information</a></li>
+                             <li><a href="/mycourse">My Courses</a></li>
+                             
+                           </ul>
+                     </div>
+                 </div>
+             </li>
+         </ul>
+     </div>
+     </header>
+     
+     <section id="banner">
+         <div id="black" >
+             
+         </div>
+     </section>
+
+    <br><br><br><br><br>
+    <!-- Rest of the page content -->
+    <div class="container">
+        <h2>Sport Comments</h2>
+        <ul class="comments-list">
+            <% comments.forEach(function(comment) { %>
+                <li class="comment">
+                    <div class="comment-header">
+                        <span class="username"><%= comment.userName %></span>
+                    </div>
+                    <p class="comment-content"><%= comment.content %></p>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

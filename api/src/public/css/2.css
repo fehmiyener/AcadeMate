@@ -1,0 +1,648 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif, bold;
+}
+
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+
+.menu-bar {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* Align items to the right */
+    align-items: center;
+    width: 100%;
+    
+    padding-right: 75px;
+    /* Sağdan boşluk bırakır */
+    padding: 10px 75px;
+    background-color: rgb(188, 178, 188);
+    z-index: 99;
+    
+}
+.welcome-text h5 {
+    margin-right: 70px; /* İstenilen boşluk miktarını burada ayarlayabilirsiniz */
+    margin-top: 1px; /* İstenilen boşluk miktarını burada ayarlayabilirsiniz */
+    display: inline-block; /* Diğer öğelerle aynı satırda olmasını sağlar */
+    color: #c11717;
+}
+
+
+.logo {
+    position: fixed;
+    /* Öğeyi sabit bir konumda tutar */
+
+    left: 45;
+    /* Sol kenara yapıştırır */
+    top: -40;
+    /* Üst kenara yapıştırır */
+    width: 150px;
+    height: 150px;
+    color: gray;
+}
+
+.logo span {
+    color: var(--color-primary);
+}
+
+#item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#item li {
+    list-style: none;
+    padding-right: 50px;
+
+}
+
+#item li a {
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bolder;
+}
+
+#item li a:hover,
+#item .icon i:hover {
+    color: #ff5733;
+    cursor: pointer;
+}
+
+#item .icon i {
+    color: #fff;
+    padding-right: 30px;
+    font-weight: bolder;
+}
+
+.menu-bar ul {
+    display: flex;
+    list-style: none;
+    color: #02010e;
+    justify-content: flex-end;
+}
+
+.menu-bar ul li {
+    margin-left: 30px;
+    padding: 10px;
+    width: 120px;
+    margin: 10px;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.active {
+    position: relative;
+}
+
+
+.menu-bar .fa {
+    margin-right: 0px;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.749);
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px;
+    background: rgba(255, 255, 255, 0.749);
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 div ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px;
+    background: rgba(255, 255, 255, 0.749);
+    border-radius: 0;
+    text-align: left;
+    margin-left: -30;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: #d24ddb
+}
+
+html {
+    scrollbar-width: thin; /* Kaydırma çubuğu kalınlığı */
+    scrollbar-color: gainsboro transparent; /* Kaydırma çubuğu rengi (arka plan ve çubuk) */
+}
+
+/* Kaydırma çubuğu başlık kısmının arka plan rengi */
+html::-moz-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Kaydırma çubuğu çubuğunun rengi */
+html::-moz-scrollbar-thumb {
+    border-radius: 100rem;
+    background-color: rgb(150, 150, 150);
+}
+
+.fa-angle-right {
+    float: right
+}
+
+.sub-menu-2 {
+    display: none;
+}
+
+.hover-me:hover .sub-menu-2 {
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: rgba(255, 255, 255, 0.749);
+
+}
+
+.back {
+    background-image: url(/resimler/lets.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    z-index: -1;
+}
+
+.back .overlay {
+    background: #f7ebe9;
+    width: 100%;
+    height: 100%;
+    opacity: 0.35;
+}
+
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8rem 15rem;
+    background: #cbb7b7;
+
+}
+
+.details h3,
+h5,
+h6 {
+    color: #0b0b0b;
+}
+
+.details .one {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.details .one h3 {
+    font-size: 2.5rem;
+    padding-bottom: 1.1rem;
+
+}
+
+.details .one h6 {
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 1.2rem;
+
+}
+
+.details .one p {
+    color: #0f0e0e;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom: 3rem;
+
+}
+
+.details .one a {
+    color: #100f0f;
+    background: #81278141;
+    padding: 1rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.details .one a:hover {
+    background: #b09ab9;
+    color: #f13a11;
+}
+
+.details .two {
+
+    width: 45%;
+    border-left: 1px solid #12121192;
+    padding-left: 4rem;
+}
+
+.details .two h3 {
+    font-size: 2rem;
+
+}
+
+.details .two h5 {
+    font-size: 1.1rem;
+    color: #666262;
+}
+
+.details .two p {
+    font-size: 1.1rem;
+    color: #666262;
+    margin-bottom: 0.8rem;
+}
+
+.trainer {
+    background: #f9f9f9;
+    padding: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trainer .about {
+    width: 39%;
+
+}
+
+.trainer .about h2 {
+
+    text-align: left;
+    color: #212526;
+    font-size: 2.5rem;
+    padding-bottom: 2.5rem;
+
+}
+
+.trainer .about p {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.5rem;
+}
+
+.trainer .people {
+    width: 57%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trainer .people .team1 {
+    width: 45%;
+    height: auto;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow:
+        1.9px 1.9px 3.6px rgba(0, 0, 0, 0.031),
+        5.4px 5.4px 10px rgba(0, 0, 0, 0.045),
+        13px 13px 24.1px rgba(0, 0, 0, 0.059),
+        43px 43px 80px rgba(0, 0, 0, 0.09);
+
+}
+
+.trainer .people .team1 .img img {
+    width: 100%;
+    object-fit: cover;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.trainer .people .team1 .name,
+.trainer .people .team1 .pro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.trainer .people .team1 .name {
+    padding: 5px 20px 0 20px;
+}
+
+.trainer .people .team1 .teamDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+
+}
+
+.trainer .people .team1 .name h4 {
+    color: #212529;
+    font-size: 1.5rem;
+
+}
+
+.trainer .people .team1 .name i,
+.trainer .people .team1 .pro i {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #212529;
+}
+
+.trainer .people .team1 .pro {
+    padding: 0 20px 5px 20px;
+}
+
+.trainer .people .team1 .pro p {
+    color: #212529;
+    font-size: 1rem;
+
+}
+
+.class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7rem 8rem;
+}
+
+.class .paragraph {
+    font-size: 1.3rem;
+    color: #95a5a6;
+    padding-bottom: 6px;
+    text-align: center;
+}
+
+.class .h2 {
+    font-size: 2.2rem;
+    color: #222;
+    font-weight: 700;
+    padding-bottom: 50px;
+    text-align: center";
+
+}
+
+.class .classMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.class .classMenu .team1 {
+    width: 32%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow:
+        1.9px 1.9px 3.6px rgba(0, 0, 0, 0.031),
+        5.4px 5.4px 10px rgba(0, 0, 0, 0.045),
+        13px 13px 24.1px rgba(0, 0, 0, 0.059),
+        43px 43px 80px rgba(0, 0, 0, 0.09);
+
+}
+
+.class .classMenu .team1 .img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.class .classMenu .team1 .teamDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.class .classMenu .team1 .teamDetails .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px 0 30px;
+}
+
+.class .classMenu .team1 .teamDetails .name .nameDetails h4 {
+    color: #212529;
+    font-size: 1.7rem;
+}
+
+.class .classMenu .team1 .teamDetails .name .nameDetails p {
+    color: #212529;
+    font-size: 1.1rem;
+}
+
+.class .classMenu .team1 .teamDetails .name .nameDetails p span {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.class .classMenu .team1 .teamDetails .name .num h5 {
+    font-size: 1rem;
+    background: #f13a11;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.class .classMenu .team1 .pro {
+    padding: 15px 30px 30px 30px;
+
+}
+
+.class .classMenu .team1 .pro p {
+    font-size: 1.1rem;
+    color: #666262;
+}
+
+.contact {
+    padding: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.contact .form {
+    width: 45%;
+}
+
+.contact .form h2 {
+    font-size: 2rem;
+    color: #212529;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.contact .form .submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.contact .form .submit input,
+.contact .form .submit textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #95a5a6;
+    outline: none;
+    margin: 13px 0;
+
+}
+
+.contact .form .submit input:focus,
+.contact .form .submit textarea:focus {
+    border: 1px solid #111;
+
+}
+
+.contact .form .submit input::placeholder {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+
+}
+
+.contact .form .submit textarea::placeholder {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    height: 80%;
+
+}
+
+.contact .form .submit a {
+    width: 100%;
+    padding: 15px 0;
+    text-decoration: none;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 13px 0;
+}
+
+.contact .map {
+    width: 45%;
+
+}
+
+.contact .map .img img {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.contact .map h2 {
+    font-size: 2rem;
+    color: #212529;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.contact .map p {
+    font-size: 1.1rem;
+    color: #212529;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.contact .map p i {
+    color: red;
+    padding-right: 4px;
+}
+
+.contact .map iframe {
+    width: 100%;
+}
+
+.footer {
+    border-top: 1px solid #ecf0f1;
+    padding: 5rem 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .p {
+    color: #7f8c8d;
+    justify-content: flex-start;
+
+}
+
+.footer .p i {
+    color: red;
+    padding-right: 5px;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+    <link rel="stylesheet" href="/css/stylecr.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="/"><img class="logo"  src="/resimler/logo3.png" alt=""></a> 
+     
+     
+         <div class="menu-bar">
+             
+         <ul>
+             <li class="active"><a href="/"><i class="fa fa-home"></i>Home</a></li>
+             
+             <li><a href="#"><i class="fa fa-clone"></i>Courses</a>
+                 <div class="sub-menu-1">
+                     <ul> 
+                       
+                       
+                       <li class="hover-me"><a href="#">By Category</a><i class="fa fa-angle-right"></i>
+                 <div class="sub-menu-2">
+                         <ul> 
+                           <li><a href="/software">Software</a></li>
+                           <li><a href="/sport">Sport</a></li>
+                           <li><a href="/marketing">Marketing</a></li>
+                           <li><a href="/music">Music</a></li>
+                         </ul>
+                 </div>
+             </li>
+                       
+                     </ul>
+                 </div>
+             </li>
+     
+             
+             
+             <li><a href="#"><i class="fa fa-user"></i>My Profile</a>
+                 <div class="sub-menu-1">
+                     <div>
+                         <ul> 
+                             <li><a href="/profile">Personal information</a></li>
+                             <li><a href="/mycourse">My Courses</a></li>
+                             
+                           </ul>
+                     </div>
+                 </div>
+             </li>
+         </ul>
+     </div>
+     </header>
+     
+     <section id="banner">
+         <div id="black" >
+             
+         </div>
+     </section>
+
+     <br><br><br><br>
+    <!-- Rest of the page content -->
+    <div class="container">
+        <h2><strong>Marketing Courses</strong></h2>
+        <div class="row">
+            <% lessons.forEach(function(lesson) { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="<%= lesson.image %>" class="card-img-top" alt="<%= lesson.name %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= lesson.name %></h5>
+                            <p class="card-text"><strong>Description:</strong> <%= lesson.lessonDescription %></p>
+                            <p class="card-text"><strong>Type:</strong> <%= lesson.lessonType %></p>
+                            <p class="card-text"><strong>Price:</strong> <%= lesson.lessonPrice %> TL</p>
+                            <a href="#" class="btn btn-primary" data-toggle="modal"
+                                data-target="#marketingStrategyModal<%= lesson.id %>">Learn More</a>
+                            <a href="#" class="btn btn-success take-lesson-button" data-lesson-id="<%= lesson.id %> " data-lesson-type="<%= lesson.lessonType %>" >Take Lesson</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="marketingStrategyModal<%= lesson.id %>" tabindex="-1" role="dialog"
+                    aria-labelledby="marketingStrategyModalLabel<%= lesson.id %>" aria-hidden="true">
+                    <form action="/mrcomments" method="post">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="marketingStrategyModalLabel<%= lesson.id %>">
+                                        <%= lesson.name %> - Instructor Info
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Lesson Info -->
+                                    <p><strong>Instructor Name:</strong> <%= lesson.iname %></p>
+                                    <p><strong>Instructor Number:</strong> <%= lesson.inumber %></p>
+                                    <p><strong>Graduation:</strong> <%= lesson.igraduation %></p>
+                                    <p><strong>Experience:</strong> <%= lesson.iexperience %></p>
+                                    
+                                    <!-- comment box -->
+                                    <input type="hidden" name="lessonId" value="<%= lesson.id %>">
+                                    <div class="form-group">
+                                        <label for="userName">User Name:</label>
+                                        <input type="text" class="form-control" name="userName" id="userName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="content">Add Comment:</label>
+                                        <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Send Comment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- End of Modal -->
+            <% }); %>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function takeLesson(lessonId, lessonType) {
+            $.ajax({
+                url: '/take-lesson',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ lessonId: lessonId, lessonType: lessonType }),
+                success: function(response) {
+                    alert('Lesson added to your courses successfully!');
+                },
+                error: function(xhr, status, error) {
+                    alert('Error taking lesson: ' + xhr.responseText);
+                }
+            });
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.take-lesson-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const lessonId = this.getAttribute('data-lesson-id');
+                    const lessonType = this.getAttribute('data-lesson-type');
+                    takeLesson(lessonId, lessonType);
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

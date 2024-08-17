@@ -1,0 +1,380 @@
+<html>
+
+<head>
+    <title> Welcome to AcadeMate </title>
+    <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/ font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity=" sha384-wvfXpqpZZvQGK6TAh5PV1GOfQNHSOD2xbE+QkPxCAF1NEEVOEH3S10sibVcOQUnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/2.css">
+
+</head>
+
+<body>
+
+    <div class="menu-bar">
+        <img class="logo" width="250px" height="70px" src="/resimler/logo3.png" alt="">
+        <div class="welcome-text">
+            <h5>Welcome "<%= user.fullname%>"</h5>
+        </div>
+        <ul>
+            <li><a href="#home"><i class="fa fa-users"></i>Home </a>
+            <li class="active"><a href="#about us"><i class="fa fa-home"></i>About Us</a></li>
+            <div class="sub-menu-1">
+                <ul>
+                    <li class="hover-me"><a href="#">Mission</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="#">Vision</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="#">Our Team</a><i class="fa fa-angle-right"></i></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#"><i class="fa fa-clone"></i>Courses</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        
+                        <li class="hover-me"><a href="#">By Category</a><i class="fa fa-angle-right"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="/software">Software</a></li>
+                                    <li><a href="/sport">Sport</a></li>
+                                    <li><a href="/marketing">Marketing</a></li>
+                                    <li><a href="/music">Music</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#faq"><i class="fa fa-question"></i></i>FAQ</a>
+
+                
+            </li>
+            <li><a href="#contact"><i class="fa fa-phone"></i>Contact</a>
+            </li>
+            <li><a href="/profile"><i class="fa fa-user"></i>My Profile</a>
+                <div class="sub-menu-1">
+                    <div>
+                        <ul> 
+                            <li><a href="/profile">Personal information</a></li>
+                            <li><a href="/mycourse">My Courses</a></li>
+                            
+                          </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <section id="banner">
+        <div id="black"></div>
+    </section>
+
+    <div class="back">
+        <div class="overlay"></div>
+    </div>
+    <section id="home">
+        <div class="details">
+            <div class="one">
+                <h3> What is AcadeMate?</h3>
+                <h6> Yes, you heard it right! AcadeMate is completely free and here for you!</h6>
+                <p> AcadeMate is an online platform that facilitates mutual learning, enabling users to create courses
+                    and receive lessons in exchange for free education and training in various fields.
+                </p>
+                <a href="#"> become a member today!</a>
+            </div>
+            <div class="two">
+                <h3> OUR MISSION </h3>
+                <h5> Empower students worldwide by providing free education and training in their chosen fields of
+                    expertise through an accessible online platform. We aim to break down barriers to education and
+                    create opportunities for personal and professional growth, fostering a community of lifelong
+                    learners who can thrive in an ever-changing world.
+                </h5>
+
+                <br>
+                <h3>OUR VISION</h3>
+                <h5>To be the leading global platform for free education, where students can acquire knowledge, skills,
+                    and certifications in their desired fields, regardless of their socioeconomic background. We
+                    envision a future where education is not a privilege but a fundamental right, and where individuals
+                    can unlock their full potential to shape a better world for themselves and others.</h5>
+            </div>
+        </div>
+    </section>
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <section id="about us">
+        <div class="trainer">
+            <div class="about">
+                <h2> Hi there! <br> We are AcadeMate Team.</h2>
+            </div>
+            <div class="people">
+                <div class="team1">
+                    <div class="img">
+                        <img src="/resimler/merve.jpeg">
+                    </div>
+                    <div class="teamDetails">
+                        <div class="name">
+                            <h4> Merve Duman </h4>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="pro">
+                            <p> Platform Developer</p>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="team1">
+                    <div class="img">
+                        <img src="/resimler/fehmi.jpeg">
+                    </div>
+                    <div class="teamDetails">
+                        <div class="name">
+                            <h4> Fehmi Yener </h4>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="pro">
+                            <p> Academate CEO</p>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="team1">
+                    <div class="img">
+                        <img src="/resimler/mervev.png">
+                    </div>
+                    <div class="teamDetails">
+                        <div class="name">
+                            <h4> Merve Verirşen </h4>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="pro">
+                            <p> Content <br> Creator</p>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="team1">
+                    <div class="img">
+                        <img src="/resimler/kübra.png">
+                    </div>
+                    <div class="teamDetails">
+                        <div class="name">
+                            <h4> Kübra <br> Cerit </h4>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="pro">
+                            <p> Community Manager </p>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="team1">
+                    <div class="img">
+                        <img src="/resimler/diyadin.png">
+                    </div>
+                    <div class="teamDetails">
+                        <div class="name">
+                            <h4> Diyadin Çetinkaya </h4>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="pro">
+                            <p> Back-End Developer</p>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------------------------------------------------------------->
+    <section id="faq">
+        <div class="class">
+            <h2 class="h2"> FREQUENTLY QUESTIONS ANSWERS</h2>
+            <p class="paragraph"> get answers in your mind</p> <br>
+
+
+            <div class="classMenu">
+                <div class="team1">
+                    <div class="img">
+                        <img src="/resimler/6.png">
+                    </div>
+                    <div class="teamDetails">
+                        <div class="name">
+                            <div class="nameDetails">
+                                <h4>GENERAL QUESTIONS</h4>
+                                <p>Trained by - <span>Merve Verirşen</span></p>
+                            </div>
+                            <div class="num">
+                                <h5>?</h5>
+                            </div>
+                        </div>
+                        <div class="pro">
+                            <p> What is AcadeMate? <br>
+                                AcadeMate is an online platform dedicated to providing free education and training in
+                                various fields of expertise. <br>
+
+                                How does AcadeMate work?<br>
+                                AcadeMate encourages users to share knowledge and skills through mutual learning,
+                                allowing them to create courses and receive lessons in return. <br>
+
+                                Is AcadeMate really free?<br>
+                                Yes, AcadeMate is completely free for all users. <br>
+                                Who can use AcadeMate?<br>
+                                Anyone who has access to the internet. Whether you're a student, professional, or
+                                lifelong learner, you can benefit from our courses and resources to expand your
+                                knowledge and skills.<br>
+
+                                How can I support AcadeMate?<br>
+                                Spread the word: Tell your friends, family, and colleagues about our platform and
+                                encourage them to explore the free educational resources available </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="team1">
+                    <div class="img">
+                        <img src="/resimler/7.png">
+                    </div>
+                    <div class="teamDetails">
+                        <div class="name">
+                            <div class="nameDetails">
+                                <h4>USER ACCOUNT</h4>
+                                <p>Trained by - <span>Merve Verirşen</span></p>
+                            </div>
+                            <div class="num">
+                                <h5>?</h5>
+                            </div>
+                        </div>
+                        <div class="pro">
+                            <p> How do I create an account on AcadeMate?<br>
+                                To create an account on AcadeMate, simply visit our website and click on the "Sign Up"
+                                button. Fill in the required information, and your account will be created.<br>
+
+                                Can I access my account from multiple devices?<br>
+                                Yes, you can access your AcadeMate account from multiple devices by logging in with your
+                                username and password.<br>
+
+                                How do I reset my password?<br>
+                                If you need to reset your password on AcadeMate, you can do so by clicking on the
+                                "Forgot Password" link on the login page. Follow the instructions to reset your
+                                password.<br>
+
+                                Is my personal information secure on AcadeMate?<br>
+                                Yes, AcadeMate takes the security and privacy of your personal information seriously. We
+                                employ industry-standard security measures to protect your data.<br>
+
+                                Can I delete my account?<br>
+                                Yes, you have the option to delete your AcadeMate account at any time. Simply access
+                                your account settings and follow the instructions for account deletion.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team1">
+                    <div class="img">
+                        <img src="/resimler/8.png">
+                    </div>
+                    <div class="teamDetails">
+                        <div class="name">
+                            <div class="nameDetails">
+                                <h4>ABOUT COURSES</h4>
+                                <p>Trained by - <span>Merve Verirşen</span></p>
+                            </div>
+                            <div class="num">
+                                <h5>?</h5>
+                            </div>
+                        </div>
+                        <div class="pro">
+                            <p> What types of courses are available on AcadeMate?<br>
+                                AcadeMate offers a wide range of courses covering various subjects, including
+                                technology, business, arts, sciences, and more.<br>
+
+                                How do I enroll in a course on AcadeMate?<br>
+                                To enroll in a course on AcadeMate, browse our course catalog, select the course you're
+                                interested in, and click on the "Enroll" button.<br>
+
+                                Are the courses on AcadeMate accredited?<br>
+                                While our courses on AcadeMate are designed to provide high-quality education,
+                                accreditation may vary.<br>
+
+                                Can I earn certifications or credits through AcadeMate?<br>
+                                Yes, depending on the course, you may be eligible to earn certifications or credits upon
+                                successful completion.<br>
+
+                                How often are new courses added to AcadeMate?<br>
+                                New courses are regularly added to AcadeMate to keep our content fresh and relevant. Be
+                                sure to check back often for updates on new course offerings. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------------------------------------------------------------------------->
+    <section id="contact">
+        <div class="contact">
+            <form class="form" action="/message" method="POST" id="contactForm">
+                <h2>We'll get back to you as soon as possible</h2>
+                <div class="submit">
+                    <input type="text" name="name" placeholder="Name" id="name" required>
+                    <input type="email" name="mail" placeholder="Email" id="mail" required>
+                    <textarea placeholder="Message" name="content" required></textarea>
+                    <button type="submit"> Send Message </button>
+                </div>
+            </form>
+            <div class="map">
+                <h2>WHERE YOU CAN FIND US</h2>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Abdullah Gul University, Sumer Campus, 38080</p>
+                <img src="/resimler/kayseri.png">
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>Copyright 2024 Academate.com<br> Design: AcadeMate Graphic Design Team</p>
+        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>
+            Email: <br>
+
+            Support Requests: support@academate.com<br>
+
+            Collaboration Inquiries: collaboration@academate.com<br>
+
+            Complaints and Feedback: feedback@academate.com<br><i class="fa fa-phone" aria hidden="true"></i>
+            +90 (212) 345 67 89
+            <br>
+            +90 (212) 345 67 899
+        </p>
+    </div>
+
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault();
+
+                const formData = $(this).serialize();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/message',
+                    data: formData,
+                    success: function(response) {
+                        if (response.success) {
+                            alert(response.message);
+                            $('#contactForm')[0].reset();
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred while sending the message. Please try again.');
+                    }
+                });
+            });
+        });
+    </script>
+
+</html>
